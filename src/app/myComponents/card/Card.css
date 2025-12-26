@@ -1,0 +1,183 @@
+.card-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+}
+
+/* .card-inner {
+    background-color: red;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} */
+
+.card-inner {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    border-radius: 20px;
+    background-color: rgb(29, 28, 28);
+}
+
+.card-inner::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+
+    border-radius: 16px;
+    pointer-events: none;
+
+    /* REAL dotted border */
+    border: 2px dotted rgba(255, 255, 255, 0.35);
+
+    /* hide top completely */
+    clip-path: polygon(0% 60%,
+            /* left start */
+            0% 100%,
+            100% 100%,
+            100% 60%,
+            95% 40%,
+            95% 0%,
+            5% 0%,
+            5% 40%);
+
+    /* fade left & right edges */
+    mask-image: linear-gradient(to top,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 50%,
+            rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to top,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 50%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.circles-container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(111, 111, 8);
+    width: 100%;
+    gap: 50px;
+    justify-content: space-between;
+    padding-right: 60px;
+}
+
+.circle {
+    height: 40px;
+    width: 40px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.circle-right {
+    display: flex;
+    flex-direction: row;
+    background-color: green;
+    gap: 20px;
+    align-items: center;
+}
+
+.circle-left {
+    display: flex;
+    flex-direction: row;
+    background-color: palevioletred;
+    gap: 90px;
+    align-items: center;
+}
+
+.circle-one {
+    background-color: black;
+    border: 5px solid gold;
+    height: 50px;
+    width: 50px;
+}
+
+.circle-two {
+    background-color: rgb(217, 217, 217);
+    opacity: 50%;
+}
+
+.circle-three {
+    background-color: #D9D9D9;
+    opacity: 30%;
+}
+
+.circle-four {
+    background-color: #D9D9D9;
+    opacity: 15%;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.title p {
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-weight: 600;
+}
+
+.logo {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    gap: 10px;
+}
+
+.ai-chat {
+    display: flex;
+    flex-direction: row;
+    background-color: purple;
+}
+
+.ai-chat p {
+    width: fit-content;
+    background-color: brown;
+    border-radius: 10px;
+    border-top-left-radius: 2px;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.user-chat {
+    display: flex;
+    flex-direction: row;
+    background-color: orange;
+    justify-content: flex-end;
+}
+
+.user-chat p {
+    width: fit-content;
+    background-color: darkblue;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 10px;
+    border-bottom-right-radius: 2px;
+}
